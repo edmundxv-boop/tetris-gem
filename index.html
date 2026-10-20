@@ -130,7 +130,7 @@
     .speed-bars i{display:block;width:4px;background:var(--accent);opacity:.2}
     .speed-bars i.on{opacity:1}
     .board-frame{
-      position:relative;padding:8px 8px 144px;width:min(100%,calc((100dvh - 142px)/2));height:auto;justify-self:center;align-self:center;
+      position:relative;padding:8px 8px 144px;width:min(100%,calc((100dvh - 142px)/2));height:100%;justify-self:center;align-self:center;display:flex;flex-direction:column;
       background:
         linear-gradient(112deg,rgba(255,255,255,.11),transparent 25%,rgba(0,0,0,.34)),
         repeating-linear-gradient(92deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px),var(--frame);
@@ -144,7 +144,7 @@
       box-shadow:0 0 34px hsla(var(--level-hue,168),92%,54%,.14),0 0 90px hsla(var(--level-hue,168),90%,48%,.08);
       opacity:calc(.45 + var(--level-power, .2));transition:all .7s ease;
     }
-    #game{display:block;width:100%;height:100%;background:var(--well);touch-action:none;filter:saturate(1.22) contrast(1.09);border-radius:17px;box-shadow:inset 0 0 54px hsla(var(--level-hue,168),92%,52%,.075)}
+    #game{display:block;width:100%;height:auto;flex:1 1 auto;min-height:0;min-width:0;background:var(--well);touch-action:none;filter:saturate(1.22) contrast(1.09);border-radius:17px;box-shadow:inset 0 0 54px hsla(var(--level-hue,168),92%,52%,.075)}
     .screen{
       position:absolute;inset:8px 8px 144px;z-index:5;display:grid;place-items:center;text-align:center;padding:24px;
       background:linear-gradient(rgba(3,7,14,.82),rgba(10,21,39,.89));color:#f1f5fb;backdrop-filter:blur(4px) saturate(.82);border-radius:17px;
@@ -228,7 +228,7 @@
       .text-btn::after{display:grid;place-items:center;font:500 10px/1 "DM Mono",ui-monospace,Menlo,Consolas,monospace;color:#d7e2f0}
       #musicBtn::after{content:"♪"}#pauseBtn::after{content:"Ⅱ"}#restartBtn::after{content:"↻"}
       .level-backdrop{top:57%;opacity:.9}.level-backdrop span{font-size:15px}.level-backdrop strong{font-size:clamp(126px,45vw,178px)}
-      .board-frame{width:min(100%,calc((100dvh - 136px)/2));height:auto;max-height:100%;padding:5px 5px 142px;border-radius:22px;box-shadow:0 18px 44px rgba(2,8,16,.22)}
+      .board-frame{width:min(100%,calc((100dvh - 136px)/2));height:100%;max-height:100%;padding:5px 5px 142px;border-radius:22px;box-shadow:0 18px 44px rgba(2,8,16,.22)}
       #game{border-radius:17px}.screen{inset:5px 5px 142px}.screen h2{font-size:27px}.screen p{font-size:13px}
       .controls{left:7px;right:7px;bottom:6px;height:130px;padding:8px;grid-template-columns:minmax(170px,1fr) 88px;gap:10px;border-radius:27px 27px 16px 16px}
       .dpad{width:164px;height:112px}
